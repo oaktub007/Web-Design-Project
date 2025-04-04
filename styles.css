@@ -88,103 +88,112 @@ body {
   
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f6f8fa;
-  }
-  
-  header {
-    background-color: #24292f;
-    padding: 1rem 0;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #00bcd4;
-  }
-  
-  /* Projects Section */
-  #projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  .project-card {
-    background-color: #fff;
-    border: 1px solid #e1e4e8;
-    border-radius: 8px;
-    padding: 1.5rem;
-    width: 300px; /* Smaller width */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-card h3 a {
-    text-decoration: none;
-    color: #0366d6;
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  
-  .project-card h3 a:hover {
-    color: #004d8f;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    color: #586069;
-    margin: 1rem 0;
-  }
-  
-  .project-card .repo-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
-    color: #586069;
-  }
-  
-  .repo-details .star-count {
-    color: #ffd700;
-  }
-  
-  .project-card .repo-details strong {
-    color: #0366d6;
-  }
-  
-  /* Loading text */
-  #projects-container p {
-    font-size: 1.2rem;
-    color: #999;
-  }
-  
-  /* Highlight current page in nav */
-  .nav-links a.active {
-    color: #00bcd4;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117; /* GitHub dark background */
+  color: #c9d1d9;
+}
+
+header {
+  background-color: #161b22; /* GitHub header/nav bar */
+  padding: 1rem 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #c9d1d9;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+/* Projects Section */
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.project-card {
+  background-color: #161b22; /* GitHub card background */
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Title bar at the top of the card */
+.project-card h3 {
+  background-color: #21262d;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #58a6ff;
+  border-bottom: 1px solid #30363d;
+}
+
+.project-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #8b949e;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.project-card .repo-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #8b949e;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.repo-details .star-count {
+  color: #f1c40f;
+}
+
+/* Loading text */
+#projects-container p {
+  font-size: 1.2rem;
+  color: #8b949e;
+}
+
+/* Highlight current page in nav */
+.nav-links a.active {
+  color: #58a6ff;
+}
