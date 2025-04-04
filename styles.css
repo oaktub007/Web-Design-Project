@@ -86,3 +86,38 @@ body {
     color: #00bcd4;
   }
   
+  #projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card h3 a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .project-card h3 a:hover {
+    color: #0097a7;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .project-card strong {
+    color: #00bcd4;
+  }
+  
