@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Projects</h1>
+    <div id="projects-container">
+      <p>Loading your projects...</p>
+    </div>
+  </main>
+
+  <script>
+    // GitHub API URL - Replace YOUR_USERNAME with your GitHub username
+    const username = "oaktub007";
+    const url = `https://api.github.com/users/${oaktub007}/repos`;
+
+    // Function to fetch and display projects
+    async function fetchGitHubProjects() {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const projectsContainer = document.getElementById("projects-container");
+        projectsContainer.innerHTML = ""; // Clear loading message
+
+        if (data.length === 0) {
+          projectsContainer.innerHTML = "<p>No public projects found.</p>";
+        } else {
+          data.forEach((repo) => {
+            const projectCard = document.createElement("div");
+            projectCard.classList.add("project-card");
+
+            projectCard.innerHTML = `
+              <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+              <p>${repo.description || "No description available"}</p>
+              <p><strong>Language:</strong> ${repo.language}</p>
+            `;
+            projectsContainer.appendChild(projectCard);
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching GitHub projects:", error);
+        document.getElementById("projects-container").innerHTML =
+          "<p>Failed to load projects.</p>";
+      }
+    }
+
+    // Fetch the projects once the page loads
+    window.onload = fetchGitHubProjects;
+  </script>
+</body>
+</html>
