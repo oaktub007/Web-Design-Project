@@ -1,5 +1,10 @@
 # Personal Website/Portfolio
 
+![GitHub stars](https://img.shields.io/github/stars/oaktub007/Web-Design-Project?style=social)
+![GitHub forks](https://img.shields.io/github/forks/oaktub007/Web-Design-Project?style=social)
+![GitHub issues](https://img.shields.io/github/issues/oaktub007/Web-Design-Project?style=flat-square)
+
+
 Welcome to my **personal website/portfolio**! 🎉
 
 This project is designed to showcase my skills, projects, and experiences as a **programmer**. The primary goal is to create a professional space where I can display my work and demonstrate my growth as a developer.
